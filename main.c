@@ -20,6 +20,7 @@ BITMAP *buffer;
 
 // Array to store life
 int life_array[LIFE_W][LIFE_H];
+int save_life_array[LIFE_W][LIFE_H];
 
 // Simulation running
 int running = 0;
@@ -122,6 +123,18 @@ void update(){
     life_array[mouse_x/CELL_SIZE][mouse_y/CELL_SIZE] = 1;
   if( mouse_b & 2)
     life_array[mouse_x/CELL_SIZE][mouse_y/CELL_SIZE] = 0;
+
+  // Save screen for recall
+  if( key[KEY_S]){
+    fill_array( save_life_array, LIFE_W, LIFE_H, 0);
+    copy_array( save_life_array, life_array, LIFE_W, LIFE_H);
+  }
+
+  // Load
+  if( key[KEY_L]){
+    fill_array( life_array, LIFE_W, LIFE_H, 0);
+    copy_array( life_array, save_life_array, LIFE_W, LIFE_H);
+  }
 
   // Create a random shape
   if( key[KEY_W]){
