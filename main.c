@@ -10,7 +10,7 @@
 #include <allegro.h>
 #include <math.h>
 
-#define CELL_SIZE 10
+#define CELL_SIZE 8
 
 #define LIFE_W 100
 #define LIFE_H 100
