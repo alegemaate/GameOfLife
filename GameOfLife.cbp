@@ -10,7 +10,7 @@
 				<Option output="build/GameOfLife" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build/" />
 				<Option object_output="obj/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
@@ -32,7 +32,7 @@
 			<Add option="-pedantic" />
 			<Add option="-Wextra" />
 			<Add option="-Wall" />
-			<Add option="-std=c99" />
+			<Add option="-std=c11" />
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
