@@ -48,8 +48,12 @@ Temporary Items
 
 
 *.o
-*.exe
-*.layout
-*.depend
 *.res
 *.dll
+*.exe
+CppCheckResults.xml
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build
